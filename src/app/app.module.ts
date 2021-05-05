@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SongsListComponent } from './songs/songs-list/songs-list.component';
 import { SongComponent } from './songs/song/song.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { SongComponent } from './songs/song/song.component';
     AppComponent,
     SongsListComponent,
     SongComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
