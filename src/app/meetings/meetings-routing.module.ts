@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { MeetingsListComponent } from './meetings-list/meetings-list.component';
+import { MeetingDetailsComponent } from './meeting-details/meeting-details.component';
+import { MeetingAddingComponent } from './meeting-adding/meeting-adding.component';
 
-const routes: Routes = [];
+const meetingsRoutes: Routes = [
+  { path: 'meetings-list', component: MeetingsListComponent },
+  { path: 'meetings-details/:id', component: MeetingDetailsComponent },
+  { path: 'meeting-adding', component: MeetingAddingComponent }
+];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(meetingsRoutes)],
   exports: [RouterModule]
 })
 export class MeetingsRoutingModule { }

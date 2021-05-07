@@ -1,18 +1,17 @@
+// modules
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { EditorRoutingModule } from './editor-routing.module';
 
+// components
 import { EditorDashboardComponent } from './editor-dashboard/editor-dashboard.component';
-import { LyricsEditorComponent } from './lyrics-editor/lyrics-editor.component';
-import { FormEditorComponent } from './form-editor/form-editor.component';
+import { SongEditorComponent } from './song-editor/song-editor.component';
 
 
 @NgModule({
   declarations: [
     EditorDashboardComponent,
-    LyricsEditorComponent,
-    FormEditorComponent
+    SongEditorComponent
   ],
   imports: [
     CommonModule,

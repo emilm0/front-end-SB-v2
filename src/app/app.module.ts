@@ -3,20 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SongsListComponent } from './songs/songs-list/songs-list.component';
-import { SongComponent } from './songs/song/song.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { SongsModule } from './songs/songs.module';
+import { EditorModule } from './editor/editor.module';
+import { MeetingsModule } from './meetings/meetings.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SongsListComponent,
-    SongComponent,
     PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
+    SongsModule,
+    EditorModule,
+    MeetingsModule,
     AppRoutingModule
   ],
   providers: [],
