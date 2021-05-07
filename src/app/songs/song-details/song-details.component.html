@@ -1,1 +1,6 @@
-<p>song-details works!</p>
+<h2>SONG</h2>
+
+<div *ngIf="song$ | async as song">
+    <button (click)="gotoSongs(song)">Back</button>
+    <span>Id: {{song.id}}</span> title: {{song.title}}
+</div>

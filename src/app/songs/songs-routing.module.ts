@@ -3,11 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 
 // components
 import { SongsListComponent } from './songs-list/songs-list.component';
-import { SongComponent } from './song/song.component';
+import { SongDetailsComponent } from './song-details/song-details.component';
 
 const songsRoutes: Routes = [
-  { path: 'songs-list', component: SongsListComponent },
-  { path: 'song/:id', component: SongComponent },
+  { path: 'songs', component: SongsListComponent },
+  { path: 'song/:id', component: SongDetailsComponent },
 ];
 
 @NgModule({
