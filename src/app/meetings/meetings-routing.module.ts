@@ -5,8 +5,8 @@ import { MeetingDetailsComponent } from './meeting-details/meeting-details.compo
 import { MeetingAddingComponent } from './meeting-adding/meeting-adding.component';
 
 const meetingsRoutes: Routes = [
-  { path: 'meetings-list', component: MeetingsListComponent },
-  { path: 'meetings-details/:id', component: MeetingDetailsComponent },
+  { path: 'meetings', component: MeetingsListComponent },
+  { path: 'meeting/:id', component: MeetingDetailsComponent },
   { path: 'meeting-adding', component: MeetingAddingComponent }
 ];
 

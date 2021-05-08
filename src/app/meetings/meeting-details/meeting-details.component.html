@@ -1,1 +1,5 @@
-<p>meeting-details works!</p>
+<h2>MEETING</h2>
+<div *ngIf="meeting$ | async as meeting">
+    <button (click)="gotoMeetings(meeting)">Back</button><br>
+    <span>Id: {{meeting.id}}</span>author: {{meeting.author}}
+</div>
