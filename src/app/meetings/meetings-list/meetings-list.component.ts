@@ -13,14 +13,14 @@ export class MeetingsListComponent implements OnInit {
 
   constructor(private service: MeetingsService) { }
 
-  getSongs(): void {
+  getMeetings(): void {
     this.service.getMeetings().subscribe(
       meetings => this.meetings = meetings
     );
   }
 
   ngOnInit(): void {
-    this.getSongs();
+    this.getMeetings();
   }
 
 }

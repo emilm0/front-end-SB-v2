@@ -7,12 +7,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { SongsModule } from './songs/songs.module';
 import { EditorModule } from './editor/editor.module';
 import { MeetingsModule } from './meetings/meetings.module';
+import { MessagesComponent } from './messages/messages.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
+    MessagesComponent,
   ],
   imports: [
     BrowserModule,

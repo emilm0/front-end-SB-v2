@@ -17,19 +17,24 @@ export class MeetingDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private servive: MeetingsService,
+    private meetingsService: MeetingsService,
   ) { }
 
   ngOnInit(): void {
     this.meeting$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
-      this.servive.getMeeting(+params.get('id')))
+      this.meetingsService.getMeeting(+params.get('id')))
     );
   }
 
   gotoMeetings(meeting: Meeting): void {
     const meetingId = meeting ? meeting.id : null;
     this.router.navigate(['/meetings', { id: meetingId }]);
+  }
+
+  save(meeting: Meeting): void {
+    this.meetingsService.updateMeeting(meeting)
+      .subscribe(() => this.gotoMeetings(meeting));
   }
 
 }

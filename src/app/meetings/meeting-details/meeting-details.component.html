@@ -1,5 +1,8 @@
 <h2>MEETING</h2>
 <div *ngIf="meeting$ | async as meeting">
     <button (click)="gotoMeetings(meeting)">Back</button><br>
-    <span>Id: {{meeting.id}}</span>author: {{meeting.author}}
+    <span>Id: {{meeting.id}}</span>
+    <label for="author">Author:</label>
+    <input id="author" [(ngModel)]="meeting.author" placeholder="Meeting author"/>
+    <button (click)="save(meeting)">Save</button>
 </div>
