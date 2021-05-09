@@ -8,6 +8,8 @@ import { SongsModule } from './songs/songs.module';
 import { EditorModule } from './editor/editor.module';
 import { MeetingsModule } from './meetings/meetings.module';
 import { MessagesComponent } from './messages/messages.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 @NgModule({
@@ -18,10 +20,12 @@ import { MessagesComponent } from './messages/messages.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     SongsModule,
     EditorModule,
     MeetingsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
