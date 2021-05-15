@@ -1,1 +1,9 @@
-<p>meeting-adding works!</p>
+<h2>ADD NEW MEETING</h2>
+<button (click)="gotoMeetings()">Back</button>
+<br><br>
+<label for="author">Author</label>
+<input [(ngModel)]="author" id="author" placeholder="Your name">
+<br>
+<input matInput [min]="minDate" [matDatepicker]="picker">
+<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+<mat-datepicker #picker></mat-datepicker>

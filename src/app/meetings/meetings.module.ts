@@ -1,17 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-
 import { MeetingsRoutingModule } from './meetings-routing.module';
 
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatFormField } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+
+
+// http modules
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+
+// components
 import { MeetingsListComponent } from './meetings-list/meetings-list.component';
 import { MeetingDetailsComponent } from './meeting-details/meeting-details.component';
 import { MeetingAddingComponent } from './meeting-adding/meeting-adding.component';
-import { HttpClientModule } from '@angular/common/http';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+
+// services
 import { InMemoryMeetingsDataService } from './in-memory-meetings-data.service';
 
+
+const dataPickerModules = [
+  MatDatepickerModule,
+  MatNativeDateModule,
+];
 
 @NgModule({
   declarations: [
@@ -21,6 +34,7 @@ import { InMemoryMeetingsDataService } from './in-memory-meetings-data.service';
   imports: [
     CommonModule,
     FormsModule,
+    dataPickerModules,
     HttpClientModule,
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { MatDatepicker } from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-meeting-adding',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MeetingAddingComponent implements OnInit {
 
-  constructor() { }
+  author: string;
+  minDate: Date;
+
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
+    this.minDate = new Date();
   }
 
+  gotoMeetings(): void {
+    this.router.navigate(['meetings']);
+  }
 }
