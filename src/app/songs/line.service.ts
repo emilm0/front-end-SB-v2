@@ -1,13 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MessageService } from '../message.service';
+import { Observable } from 'rxjs';
+import { Line } from './Line';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SongService {
+export class LineService {
 
-  songsUrl = 'api/songs';
+  private linesUrl = 'api/lines';
 
   constructor(
     private http: HttpClient,
@@ -15,4 +17,8 @@ export class SongService {
   ) { }
 
 
+  /** Get lines from the server */
+  getLines(): Observable<Line[]> {
+    return this.http.get<Line[]>(this.linesUrl);
+  }
 }
