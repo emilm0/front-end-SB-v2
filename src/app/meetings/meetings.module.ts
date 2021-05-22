@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { MeetingsRoutingModule } from './meetings-routing.module';
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatFormField } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 
 
@@ -18,7 +17,7 @@ import { MeetingDetailsComponent } from './meeting-details/meeting-details.compo
 import { MeetingAddingComponent } from './meeting-adding/meeting-adding.component';
 
 // services
-import { InMemoryMeetingsDataService } from './in-memory-meetings-data.service';
+import { InMemoryDataService } from '../in-memory-data.service';
 
 
 const dataPickerModules = [
@@ -41,7 +40,7 @@ const dataPickerModules = [
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryMeetingsDataService, { dataEncapsulation: false }
+      InMemoryDataService, { dataEncapsulation: false }
     ),
     MeetingsRoutingModule
   ]

@@ -3,7 +3,7 @@ import { SongPartsName } from './SongPartsName';
 export interface Line{
 
     id: number;
-    idSong: string;
+    songId: string;
     textPl?: string;
     chords?: string;
     textOriginal?: string;

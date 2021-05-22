@@ -1,18 +1,45 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Line } from './Line';
-import { SongPartsName } from './SongPartsName';
+import { SongPartsName } from './songs/SongPartsName';
+import { Meeting } from './meetings/meeting';
 
 @Injectable({
   providedIn: 'root'
 })
-export class InMemoryDataSongsService implements InMemoryDbService {
+export class InMemoryDataService implements InMemoryDbService {
 
   createDb(): any {
+    const meetings = [
+      { id: 1, author: 'Janusz', meetingDate: new Date(), addingDate: new Date()  },
+      { id: 2, author: 'Grażyna', meetingDate: new Date(), addingDate: new Date() },
+      { id: 3, author: 'Bolek', meetingDate: new Date(), addingDate: new Date() },
+      { id: 4, author: 'Fred', meetingDate: new Date(), addingDate: new Date() },
+    ];
+
+    const songs = [
+      { id: 'A1', titlePl: 'AA11' },
+      { id: 'A2', titlePl: 'AA22' },
+      { id: 'A3', titlePl: 'AA33' },
+      { id: 'B1', titlePl: 'BB11' },
+      { id: 'B2', titlePl: 'BB22' },
+      { id: 'B3', titlePl: 'BB33' },
+      { id: 'C1', titlePl: 'CC11' },
+      { id: 'C2', titlePl: 'CC22' },
+      { id: 'C3', titlePl: 'CC33' },
+      { id: 'C4', titlePl: 'CC44' },
+      { id: 'C5', titlePl: 'CC55' },
+      { id: 'C6', titlePl: 'CC66' },
+      { id: 'D1', titlePl: 'DD11' },
+      { id: 'D2', titlePl: 'DD22' },
+      { id: 'D3', titlePl: 'DD33' },
+      { id: 'D4', titlePl: 'DD44' },
+      { id: 'D5', titlePl: 'DD55' }
+    ];
+
     const lines = [
       {
         id: 1,
-        idSong: 'A1',
+        songId: 'A1',
         plText: 'textPl-Intro1-Line1',
         chords: 'BasicChords-Intro1-Line1',
         textOriginal: 'OriginalText-Intro1-Line1',
@@ -24,7 +51,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 2,
-        idSong: 'A1',
+        songId: 'A1',
         plText: 'textPl-Intro1-Line2',
         chords: 'BasicChords-Intro1-Line2',
         textOriginal: 'OriginalText-Intro1-Line2',
@@ -36,7 +63,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 3,
-        idSong: 'A1',
+        songId: 'A1',
         plText: 'textPl-Stanza1-Line1',
         chords: 'BasicChords-Stanza1-Line1',
         textOriginal: 'OriginalText-Stanza1-Line1',
@@ -48,7 +75,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 4,
-        idSong: 'A1',
+        songId: 'A1',
         textPl: 'textPl-Stanza1-Line2',
         chords: 'BasicChords-Stanza1-Line2',
         textOriginal: 'OriginalText-Stanza1-Line2',
@@ -60,7 +87,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 5,
-        idSong: 'A1',
+        songId: 'A1',
         textPl: 'textPl-Stanza1-Line3',
         chords: 'BasicChords-Stanza1-Line3',
         textOriginal: 'OriginalText-Stanza1-Line3',
@@ -72,7 +99,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 6,
-        idSong: 'A1',
+        songId: 'A1',
         textPl: 'textPl-Refrain1-Line1',
         chords: 'BasicChords-Refrain1-Line1',
         textOriginal: 'OriginalText-Refrain1-Line1',
@@ -84,7 +111,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 7,
-        idSong: 'A1',
+        songId: 'A1',
         textPl: 'textPl-Refrain1-Line2',
         chords: 'BasicChords-Refrain1-Line2',
         textOriginal: 'OriginalText-Refrain1-Line2',
@@ -96,7 +123,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 8,
-        idSong: 'A1',
+        songId: 'A1',
         textPl: 'textPl-Refrain1-Line3',
         chords: 'BasicChords-Refrain1-Line3',
         textOriginal: 'OriginalText-Refrain1-Line3',
@@ -108,7 +135,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 9,
-        idSong: 'A1',
+        songId: 'A1',
         textPl: 'textPl-Refrain1-Line4',
         chords: 'BasicChords-Refrain1-Line4',
         textOriginal: 'OriginalText-Refrain1-Line4',
@@ -120,7 +147,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 10,
-        idSong: 'A1',
+        songId: 'A1',
         textPl: 'textPl-Stanza2-Line1',
         chords: 'BasicChords-Stanza2-Line1',
         textOriginal: 'OriginalText-Stanza2-Line1',
@@ -132,7 +159,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 11,
-        idSong: 'A1',
+        songId: 'A1',
         textPl: 'textPl-Stanza2-Line2',
         chords: 'BasicChords-Stanza2-Line2',
         textOriginal: 'OriginalText-Stanza2-Line2',
@@ -144,7 +171,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 12,
-        idSong: 'A1',
+        songId: 'A1',
         textPl: 'textPl-Stanza1-Line3',
         chords: 'BasicChords-Stanza1-Line3',
         textOriginal: 'OriginalText-Stanza1-Line3',
@@ -156,7 +183,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 13,
-        idSong: 'A1',
+        songId: 'A1',
         textPl: 'textPl-Stanza3-Line1',
         chords: 'BasicChords-Stanza3-Line1',
         textOriginal: 'OriginalText-Stanza3-Line1',
@@ -168,7 +195,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 14,
-        idSong: 'A1',
+        songId: 'A1',
         textPl: 'textPl-Stanza3-Line2',
         chords: 'BasicChords-Stanza3-Line2',
         textOriginal: 'OriginalText-Stanza3-Line2',
@@ -180,7 +207,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 15,
-        idSong: 'A1',
+        songId: 'A1',
         textPl: 'textPl-Stanza3-Line3',
         chords: 'BasicChords-Stanza3-Line3',
         textOriginal: 'OriginalText-Stanza3-Line3',
@@ -192,7 +219,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 16,
-        idSong: 'A1',
+        songId: 'A1',
         textPl: 'textPl-Bridge1-Line1',
         chords: 'BasicChords-Bridge1-Line1',
         textOriginal: 'OriginalText-Bridge1-Line1',
@@ -204,7 +231,7 @@ export class InMemoryDataSongsService implements InMemoryDbService {
 
       {
         id: 17,
-        idSong: 'A1',
+        songId: 'A1',
         textPl: 'textPl-Bridge1-Line2',
         chords: 'BasicChords-Bridge1-Line2',
         textOriginal: 'OriginalText-Bridge1-Line2',
@@ -215,10 +242,10 @@ export class InMemoryDataSongsService implements InMemoryDbService {
       },
     ];
 
-    return { lines };
+    return {meetings, songs, lines};
   }
 
-  genId(lines: Line[]): number {
-    return lines.length > 0 ? Math.max(...lines.map(line => line.id)) + 1 : 1;
+  genId(meetings: Meeting[]): number {
+    return meetings.length > 0 ? Math.max(...meetings.map(meeting => meeting.id)) + 1 : 1;
   }
 }
