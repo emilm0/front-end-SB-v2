@@ -53,6 +53,7 @@ export class LineService {
 
   /** Get lines form one song by songId */
   getLinesFromSong(id: string): Observable<Line[]> {
+    console.log(`LineService is getting lines to song ${id}`);
     return this.http.get<Line[]>(this.linesUrl)
     .pipe(
       map(lines => lines.filter(line => line.songId === id) ),

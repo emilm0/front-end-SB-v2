@@ -12,6 +12,7 @@ import { SongDetailsComponent } from './song-details/song-details.component';
 
 // services
 import { InMemoryDataService } from '../in-memory-data.service';
+import { LyricsComponent } from './lyrics/lyrics.component';
 
 
 
@@ -19,6 +20,7 @@ import { InMemoryDataService } from '../in-memory-data.service';
   declarations: [
     SongsListComponent,
     SongDetailsComponent,
+    LyricsComponent,
   ],
   imports: [
     CommonModule,

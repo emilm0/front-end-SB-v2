@@ -40,7 +40,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 1,
         songId: 'A1',
-        plText: 'textPl-Intro1-Line1',
+        textPl: 'textPl-Intro1-Line1',
         chords: 'BasicChords-Intro1-Line1',
         textOriginal: 'OriginalText-Intro1-Line1',
         chordsOriginal: 'OriginalChords-Intro1-Line1',
@@ -52,7 +52,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 2,
         songId: 'A1',
-        plText: 'textPl-Intro1-Line2',
+        textPl: 'textPl-Intro1-Line2',
         chords: 'BasicChords-Intro1-Line2',
         textOriginal: 'OriginalText-Intro1-Line2',
         chordsOriginal: 'OriginalChords-Intro1-Line2',
@@ -64,7 +64,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {
         id: 3,
         songId: 'A1',
-        plText: 'textPl-Stanza1-Line1',
+        textPl: 'textPl-Stanza1-Line1',
         chords: 'BasicChords-Stanza1-Line1',
         textOriginal: 'OriginalText-Stanza1-Line1',
         chordsOriginal: 'OriginalChords-Stanza1-Line1',
@@ -238,6 +238,174 @@ export class InMemoryDataService implements InMemoryDbService {
         chordsOriginal: 'OriginalChords-Bridge1-Line2',
         songPartName: SongPartsName.Bridge,
         songPartNumber: 1,
+        linePosition: 2
+      },
+
+      {
+        id: 18,
+        songId: 'B1',
+        textPl: 'textPl-Intro1-Line1',
+        chords: 'BasicChords-Intro1-Line1',
+        textOriginal: 'OriginalText-Intro1-Line1',
+        chordsOriginal: 'OriginalChords-Intro1-Line1',
+        songPartName: SongPartsName.Intro,
+        songPartNumber: 1,
+        linePosition: 1
+      },
+
+      {
+        id: 19,
+        songId: 'B1',
+        textPl: 'textPl-Intro1-Line2',
+        chords: 'BasicChords-Intro1-Line2',
+        textOriginal: 'OriginalText-Intro1-Line2',
+        chordsOriginal: 'OriginalChords-Intro1-Line2',
+        songPartName: SongPartsName.Intro,
+        songPartNumber: 1,
+        linePosition: 2
+      },
+
+      {
+        id: 20,
+        songId: 'B1',
+        textPl: 'textPl-Stanza1-Line1',
+        chords: 'BasicChords-Stanza1-Line1',
+        textOriginal: 'OriginalText-Stanza1-Line1',
+        chordsOriginal: 'OriginalChords-Stanza1-Line1',
+        songPartName: SongPartsName.Stanza,
+        songPartNumber: 1,
+        linePosition: 1
+      },
+
+      {
+        id: 21,
+        songId: 'B1',
+        textPl: 'textPl-Stanza1-Line2',
+        chords: 'BasicChords-Stanza1-Line2',
+        textOriginal: 'OriginalText-Stanza1-Line2',
+        chordsOriginal: 'OriginalChords-Stanza1-Line2',
+        songPartName: SongPartsName.Stanza,
+        songPartNumber: 1,
+        linePosition: 2
+      },
+
+      {
+        id: 22,
+        songId: 'B1',
+        textPl: 'textPl-Stanza1-Line3',
+        chords: 'BasicChords-Stanza1-Line3',
+        textOriginal: 'OriginalText-Stanza1-Line3',
+        chordsOriginal: 'OriginalChords-Stanza1-Line3',
+        songPartName: SongPartsName.Stanza,
+        songPartNumber: 1,
+        linePosition: 3
+      },
+
+      {
+        id: 23,
+        songId: 'B1',
+        textPl: 'textPl-Refrain1-Line1',
+        chords: 'BasicChords-Refrain1-Line1',
+        textOriginal: 'OriginalText-Refrain1-Line1',
+        chordsOriginal: 'OriginalChords-Refrain1-Line1',
+        songPartName: SongPartsName.Refrain,
+        songPartNumber: 1,
+        linePosition: 1
+      },
+
+      {
+        id: 24,
+        songId: 'B1',
+        textPl: 'textPl-Refrain1-Line2',
+        chords: 'BasicChords-Refrain1-Line2',
+        textOriginal: 'OriginalText-Refrain1-Line2',
+        chordsOriginal: 'OriginalChords-Refrain1-Line2',
+        songPartName: SongPartsName.Refrain,
+        songPartNumber: 1,
+        linePosition: 2
+      },
+
+      {
+        id: 25,
+        songId: 'B1',
+        textPl: 'textPl-Refrain1-Line3',
+        chords: 'BasicChords-Refrain1-Line3',
+        textOriginal: 'OriginalText-Refrain1-Line3',
+        chordsOriginal: 'OriginalChords-Refrain1-Line3',
+        songPartName: SongPartsName.Refrain,
+        songPartNumber: 1,
+        linePosition: 3
+      },
+
+      {
+        id: 26,
+        songId: 'B1',
+        textPl: 'textPl-Refrain1-Line4',
+        chords: 'BasicChords-Refrain1-Line4',
+        textOriginal: 'OriginalText-Refrain1-Line4',
+        chordsOriginal: 'OriginalChords-Refrain1-Line4',
+        songPartName: SongPartsName.Refrain,
+        songPartNumber: 1,
+        linePosition: 4
+      },
+
+      {
+        id: 27,
+        songId: 'B1',
+        textPl: 'textPl-Stanza2-Line1',
+        chords: 'BasicChords-Stanza2-Line1',
+        textOriginal: 'OriginalText-Stanza2-Line1',
+        chordsOriginal: 'OriginalChords-Stanza2-Line1',
+        songPartName: SongPartsName.Stanza,
+        songPartNumber: 2,
+        linePosition: 1
+      },
+
+      {
+        id: 28,
+        songId: 'B1',
+        textPl: 'textPl-Stanza2-Line2',
+        chords: 'BasicChords-Stanza2-Line2',
+        textOriginal: 'OriginalText-Stanza2-Line2',
+        chordsOriginal: 'OriginalChords-Stanza2-Line2',
+        songPartName: SongPartsName.Stanza,
+        songPartNumber: 2,
+        linePosition: 2
+      },
+
+      {
+        id: 29,
+        songId: 'B1',
+        textPl: 'textPl-Stanza1-Line3',
+        chords: 'BasicChords-Stanza1-Line3',
+        textOriginal: 'OriginalText-Stanza1-Line3',
+        chordsOriginal: 'OriginalChords-Stanza1-Line3',
+        songPartName: SongPartsName.Stanza,
+        songPartNumber: 2,
+        linePosition: 3
+      },
+
+      {
+        id: 30,
+        songId: 'B1',
+        textPl: 'textPl-Stanza3-Line1',
+        chords: 'BasicChords-Stanza3-Line1',
+        textOriginal: 'OriginalText-Stanza3-Line1',
+        chordsOriginal: 'OriginalChords-Stanza3-Line1',
+        songPartName: SongPartsName.Stanza,
+        songPartNumber: 3,
+        linePosition: 1
+      },
+
+      {
+        id: 31,
+        songId: 'B1',
+        textPl: 'textPl-Stanza3-Line2',
+        chords: 'BasicChords-Stanza3-Line2',
+        textOriginal: 'OriginalText-Stanza3-Line2',
+        chordsOriginal: 'OriginalChords-Stanza3-Line2',
+        songPartName: SongPartsName.Stanza,
+        songPartNumber: 3,
         linePosition: 2
       },
     ];

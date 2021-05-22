@@ -3,4 +3,5 @@
 <div *ngIf="song$ | async as song">
     <button (click)="gotoSongs(song)">Back</button>
     <span>Id: {{song.id}}</span> title: {{song.titlePl}}
+    <app-lyrics [songId]="song.id"></app-lyrics>
 </div>
