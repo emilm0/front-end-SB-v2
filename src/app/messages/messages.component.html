@@ -1,5 +1,7 @@
 <div class="container" *ngIf="messageService.messages.length">
-    <h2>({{messageService.messages.length}}) Message:</h2>
-    <span>{{messageService.lastMessage}}</span>
+    <div class="message">
+        <h2>({{messageService.messages.length}}) Message:</h2>
+        <span>{{messageService.lastMessage}}</span>
+    </div>
     <button (click)="messageService.clear()"><fa-icon [icon]="faTimes" size="lg" ></fa-icon></button>   
 </div>

@@ -3,7 +3,7 @@
     margin: 10px;
     display: flex;
     flex-direction: row;
-    align-items: baseline;
+    align-items: center;
     justify-content: space-between;
     background-color: rgba(197, 180, 153, 0.2);
     color: rgb(133, 225, 231);
@@ -13,9 +13,17 @@
     text-shadow: 1px 1px black ;
 }
 
-h2 {
-   
+.message{
+    
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
+.message h2 {
+    margin: 0;
+    margin-right: 10px;
+}
+
 button {
     background: none;
     margin-right: 10px;
@@ -27,5 +35,4 @@ button:hover {
     background: none;
     transform: scale(1.5);
     cursor: pointer;
-
 }
