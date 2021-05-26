@@ -9,6 +9,10 @@ import { Song } from '../song';
 })
 export class SongsListComponent implements OnInit {
 
+  alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K',
+              'L', 'M', 'N', 'O', 'P', 'R', 'S', 'T', 'U', 'W', 'Z'];
+
+  selected = 'A';
   songs: Song[] = [];
 
   constructor(private songService: SongService) { }
@@ -20,6 +24,14 @@ export class SongsListComponent implements OnInit {
   getSongs(): void {
     this.songService.getSongs()
       .subscribe(songs => this.songs = songs);
+  }
+
+  onSelect(character: string): void {
+    this.selected = character;
+  }
+
+  isTheSameFirstLetter(song: Song): boolean {
+    return (song.titlePl.slice(0, 1) === this.selected);
   }
 
 }

@@ -6,3 +6,24 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 
 }
+/* for all components */
+.container {
+  margin: 10px;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nameContainer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 2px  rgba(0, 0, 0, 0.4);
+}
+.nameContainer h2 {
+  margin: 0;
+  text-shadow: 1px 1px black;
+}

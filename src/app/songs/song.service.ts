@@ -52,7 +52,7 @@ export class SongService {
     );
   }
 
-  /** Get song by id. Will 404 if id not found */
+  /** GET song by id. Will 404 if id not found */
   getSong(id: string): Observable<Song> {
     const url = `${this.songsUrl}/${id}`;
     return this.http.get<Song>(url).pipe(

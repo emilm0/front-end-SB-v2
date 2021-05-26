@@ -1,6 +1,15 @@
-<h2>Songs List</h2>
-<ul class="songs">
-    <li *ngFor="let song of songs">
-        <a [routerLink]="['/song', song.id]" ><span>{{song.id}}</span> {{song.titlePl}}</a>
-    </li>
-</ul>
+<div class="container">
+    <div class="nameContainer">
+        <h2>Songs List</h2>
+    </div>
+    <ul class="navBar">
+        <li *ngFor="let character of alphabet"> 
+            <button [class.selected]="character === selected" (click)="onSelect(character)">{{character}}</button>
+        </li>
+    </ul>
+    <ul class="songs">
+        <li *ngFor="let song of songs">
+            <a *ngIf="isTheSameFirstLetter(song)" [routerLink]="['/song', song.id]" ><span>{{song.id}}</span> {{song.titlePl}}</a>
+        </li>
+    </ul>
+</div>

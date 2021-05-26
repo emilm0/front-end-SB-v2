@@ -1,5 +1,5 @@
-.container {
-    padding: 5px;
+.messageContainer {
+    padding: 10px;
     margin: 10px;
     display: flex;
     flex-direction: row;
@@ -13,15 +13,14 @@
     text-shadow: 1px 1px black ;
 }
 
-.message{
-    
+.message {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
-.message h2 {
-    margin: 0;
-    margin-right: 10px;
+.message p {
+    margin: 0 20px 0 10px;
+    font-weight: 500;
 }
 
 button {

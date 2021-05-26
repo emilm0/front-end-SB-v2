@@ -1,0 +1,46 @@
+.navBar {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.navBar button {
+    margin: 2px;
+    background-color: rgba(197, 180, 153, 0.616);
+    color: white;
+    border: 1px solid black;
+    min-width: 40px;
+    font-size: 30px;
+    transition: 0.3s;
+}
+.navBar button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color: rgb(133, 225, 231);
+}
+
+.navBar button.selected {
+    background-color: rgba(197, 180, 153, 0.2);
+    font-weight: 600;
+    transform: scale(1.1);
+    text-shadow: 1px 1px black;
+    color: rgb(133, 225, 231);
+}
+
+.songs {
+    max-width: 500px;
+    min-width: 50vw;
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
