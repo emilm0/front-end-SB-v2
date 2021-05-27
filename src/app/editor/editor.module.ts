@@ -1,11 +1,11 @@
 // modules
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { EditorRoutingModule } from './editor-routing.module';
 
 // components
 import { EditorDashboardComponent } from './editor-dashboard/editor-dashboard.component';
 import { SongEditorComponent } from './song-editor/song-editor.component';
+import { SharedModule } from '../shared.module';
 
 
 @NgModule({
@@ -14,7 +14,7 @@ import { SongEditorComponent } from './song-editor/song-editor.component';
     SongEditorComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     EditorRoutingModule
   ]
 })

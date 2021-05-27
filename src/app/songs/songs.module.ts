@@ -13,6 +13,7 @@ import { SongDetailsComponent } from './song-details/song-details.component';
 // services
 import { InMemoryDataService } from '../in-memory-data.service';
 import { LyricsComponent } from './lyrics/lyrics.component';
+import { SharedModule } from '../shared.module';
 
 
 
@@ -23,8 +24,7 @@ import { LyricsComponent } from './lyrics/lyrics.component';
     LyricsComponent,
   ],
   imports: [
-    CommonModule,
-    HttpClientModule,
+    SharedModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, {dataEncapsulation: false}
     ),

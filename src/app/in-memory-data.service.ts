@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { SongPartsName } from './songs/SongPartsName';
 import { Meeting } from './meetings/meeting';
+import { SongGroup } from './songs/SongGroup';
+import { SongType } from './songs/SongType';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +19,10 @@ export class InMemoryDataService implements InMemoryDbService {
     ];
 
     const songs = [
-      { id: 'A1', titlePl: 'AA11' },
+      { id: 'A1', titlePl: 'AA11', titleOrigin: 'tytyuł oryginalny', key: 'A', keyOrigin: 'E', author: 'Autor', translator: 'Tlumacz',
+        tempo: 150, group: SongGroup.Group1, type: SongType.Type1, addTime: new Date(), copyright: 'Prawa autorskie', basedOn: 'Na podstawie',
+        linkPl: 'Link Pl', linkOrigin: 'Link oryginalny', linkToDrive: 'Link do dysku', linkToNotes: 'Link do nut', editTime: new Date(),
+        editorName: 'Edytor', editContent: 'Treść edycji', isReadyToUse: true, isInUse: false, timesOfUse: 4 },
       { id: 'A2', titlePl: 'AA22' },
       { id: 'A3', titlePl: 'AA33' },
       { id: 'B1', titlePl: 'BB11' },

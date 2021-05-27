@@ -1,6 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { MeetingsRoutingModule } from './meetings-routing.module';
 
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -8,7 +6,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 
 
 // http modules
-import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 // components
@@ -18,6 +15,7 @@ import { MeetingAddingComponent } from './meeting-adding/meeting-adding.componen
 
 // services
 import { InMemoryDataService } from '../in-memory-data.service';
+import { SharedModule } from '../shared.module';
 
 
 const dataPickerModules = [
@@ -31,11 +29,8 @@ const dataPickerModules = [
     MeetingDetailsComponent,
     MeetingAddingComponent],
   imports: [
-    CommonModule,
-    FormsModule,
+    SharedModule,
     dataPickerModules,
-    HttpClientModule,
-
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
     // Remove it when a real server is ready to receive requests.

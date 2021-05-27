@@ -1,15 +1,16 @@
-<div class="mainContainer">
+<div class="mainContainer"> 
+    <nav>
+        <h2>Spiewnik wspólnoty Głos Pana</h2>
+        <div class="navigation">
+            <a routerLink="/songs">Songs List</a>
+            <a routerLink="/meetings" >Meetings</a>
+            <a routerLink="/editor-dashboard">Editor</a>
+            <a routerLink="/login">Login</a>
+        </div>
+    </nav>
+    <app-messages></app-messages>
+  <div class="appContainer">
     
-<nav>
-    <h2>Spiewnik wspólnoty Głos Pana</h2>
-    <div class="navigation">
-        <a routerLink="/songs">Songs List</a>
-        <a routerLink="/meetings" >Meetings</a>
-        <a routerLink="/editor-dashboard">Editor</a>
-        <a routerLink="/login">Login</a>
-    </div>
-    
-</nav>
-<app-messages></app-messages>
-<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+  </div>
 </div>

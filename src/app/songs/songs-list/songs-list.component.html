@@ -2,7 +2,7 @@
     <div class="nameContainer">
         <h2>Songs List</h2>
     </div>
-    <ul class="navBar">
+    <ul class="selectedLetter">
         <li *ngFor="let character of alphabet"> 
             <button [class.selected]="character === selected" (click)="onSelect(character)">{{character}}</button>
         </li>
