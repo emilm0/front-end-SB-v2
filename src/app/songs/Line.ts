@@ -4,10 +4,10 @@ export interface Line{
 
     id: number;
     songId: string;
-    textPl?: string;
-    chords?: string;
-    textOriginal?: string;
-    chordsOriginal?: string;
+    textPl: string;
+    chords: string;
+    textOrigin: string;
+    chordsOrigin: string;
     songPart: SongPartsName;
     songPartNumber: number;
     linePosition: number;

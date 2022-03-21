@@ -15,9 +15,10 @@
             </div>
         </div>
 
+        <div class="lyricsComponent">
+            <app-lyrics [songId]="song.id"></app-lyrics>
 
-        <app-lyrics [songId]="song.id"></app-lyrics>
-
+        </div>
 
         <div (click)="isVisibleDetails = !isVisibleDetails" class="nameContainer" id="detailsHeader">
             <fa-icon [@rotatedState]="!isVisibleDetails? 'default': 'rotated'" id="angleDown" [icon]="faAngleDown" size="lg" ></fa-icon>

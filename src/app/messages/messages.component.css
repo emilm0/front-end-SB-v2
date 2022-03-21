@@ -3,7 +3,7 @@
     margin: 10px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     background-color: rgba(197, 180, 153, 0.2);
     color: rgb(133, 225, 231);
@@ -20,8 +20,11 @@
     flex-wrap: wrap;
 }
 .message p {
-    margin: 0 20px 0 10px;
+    margin: 5px 20px 5px 10px;
     font-weight: 500;
+}
+.message span {
+    font-size: smaller;
 }
 
 button {

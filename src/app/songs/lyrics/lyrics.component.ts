@@ -11,7 +11,9 @@ export class LyricsComponent implements OnInit {
 
   @Input() songId: string;
   lines: Line[];
-
+  checkedOriginLines: boolean;
+  chordsPositions = ['Right', 'Top', 'None'];
+  activatedChordsPosition = 'None';
   constructor(
     private lineService: LineService
   ) { }
