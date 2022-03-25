@@ -1,9 +1,24 @@
-<h2>ADD NEW MEETING</h2>
-<button (click)="gotoMeetings()">Back</button>
-<br><br>
-<label for="author">Author</label>
-<input [(ngModel)]="author" id="author" placeholder="Your name">
-<br>
-<input matInput [min]="minDate" [matDatepicker]="picker">
-<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-<mat-datepicker #picker></mat-datepicker>
+<div class="container">
+    <div class="head">
+        <button (click)="gotoMeetings()">Back</button>
+        <div class="title">
+            <b>ADD NEW MEETING</b>
+        </div>
+    </div>
+   <div class="body">
+        <div class="inputs">
+            <div class="author">
+                <label for="author">Author:</label>
+                <input [(ngModel)]="author" id="author" placeholder="Your name">   
+            </div>
+            <div class="mittingDate">
+                <label for="mittingDate">Metting Date:</label>
+                <input id="mittingDate" matInput [min]="minDate" [matDatepicker]="picker">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker> 
+            </div>
+        </div>
+        <div class="songslist">
+        </div>
+   </div>
+</div>

@@ -1,0 +1,39 @@
+label {
+    margin-right: 10px;  
+}
+
+div {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+input {
+    font-size: 1.2em;
+    height: 24px;
+}
+.head {
+    width: 100%;
+    font-size: 2.5em;
+    padding: 10px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+.head button {
+    margin-left: 10px;
+}
+.title{
+    margin: auto;
+    width: 100%;
+    padding: 5px;
+    line-height: 1em;
+}
+.body { 
+    width: 100%;
+}
+.inputs {
+    flex-direction: column;
+    width: 100%;
+    font-size: 14px;
+    align-items: center;
+}
