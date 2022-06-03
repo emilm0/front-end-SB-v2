@@ -1,0 +1,8 @@
+<div class="container">
+    <p *ngIf="invalidLogin">Invalid Loggin!</p>
+    <label for="username">User Name</label>
+    <input  id="uesername" [(ngModel)]="username" type="text" required>
+    <label for="password">Password</label>
+    <input id="password" [(ngModel)]="password" type="password">
+    <button (click)="handleLogin()">Loggin</button>   
+</div>

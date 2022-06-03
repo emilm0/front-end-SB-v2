@@ -12,6 +12,8 @@ import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { MessagesComponent } from './messages/messages.component';
 import { SharedModule } from './shared.module';
+import { LoginComponent } from './logger/login/login.component';
+import { WelcomeComponent } from './logger/welcome/welcome.component';
 
 
 
@@ -21,6 +23,8 @@ import { SharedModule } from './shared.module';
     AppComponent,
     PageNotFoundComponent,
     MessagesComponent,
+    LoginComponent,
+    WelcomeComponent
   ],
   imports: [
     SharedModule,
