@@ -14,6 +14,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { SharedModule } from './shared.module';
 import { LoginComponent } from './logger/login/login.component';
 import { WelcomeComponent } from './logger/welcome/welcome.component';
+import { MenuComponent } from './menu/menu.component';
 
 
 
@@ -24,7 +25,8 @@ import { WelcomeComponent } from './logger/welcome/welcome.component';
     PageNotFoundComponent,
     MessagesComponent,
     LoginComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    MenuComponent
   ],
   imports: [
     SharedModule,

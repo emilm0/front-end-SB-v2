@@ -1,0 +1,10 @@
+<nav>
+    <h2>Spiewnik wspólnoty Głos Pana</h2>
+    <div class="navigation">
+        <a routerLink="/songs">Songs List</a>
+        <a routerLink="/meetings" *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">Meetings</a>
+        <a routerLink="/editor-dashboard" *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">Editor</a>
+        <a routerLink="/login" *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()">Login</a>
+        <a routerLink="" *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">Logout</a>
+    </div>
+</nav>

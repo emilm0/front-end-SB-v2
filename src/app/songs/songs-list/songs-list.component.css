@@ -8,7 +8,7 @@
 }
 .selectedLetter button {
     margin: 2px;
-    background-color: rgba(197, 180, 153, 0.616);
+    background-color: rgba(140, 190, 202, 0.616);
     color: white;
     border: 1px solid black;
     min-width: 40px;
@@ -22,7 +22,7 @@
 }
 
 .selectedLetter button.selected {
-    background-color: rgba(197, 180, 153, 0.2);
+    background-color: rgba(90, 115, 145, 0.2);
     font-weight: 600;
     transform: scale(1.1);
     text-shadow: 1px 1px black;

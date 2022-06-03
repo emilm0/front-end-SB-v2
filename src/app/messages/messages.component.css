@@ -5,9 +5,10 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    background-color: rgba(197, 180, 153, 0.2);
-    color: rgb(133, 225, 231);
-    font-size: 18px;
+    background-color: rgba(97, 165, 192, 0.2);
+    color: rgb(235, 205, 76);
+    font-size: 22px;
+    font-weight: 500;
     border-radius: 3px;
     padding-left: 3px;
     text-shadow: 1px 1px black ;

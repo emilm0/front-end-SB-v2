@@ -14,4 +14,9 @@ export class HardcodedAuthenticationService {
     }
     return false;
   }
+
+  isUserLoggedIn(): boolean {
+    const user = sessionStorage.getItem('authenticateUser');
+    return !(user === null);
+  }
 }
