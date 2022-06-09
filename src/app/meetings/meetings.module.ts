@@ -16,6 +16,9 @@ import { MeetingAddingComponent } from './meeting-adding/meeting-adding.componen
 // services
 import { InMemoryDataService } from '../in-memory-data.service';
 import { SharedModule } from '../shared.module';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 
 
 const dataPickerModules = [

@@ -4,7 +4,7 @@ import { EditorDashboardComponent } from './editor-dashboard/editor-dashboard.co
 import { SongEditorComponent } from './song-editor/song-editor.component';
 
 const editorRoutes: Routes = [
-  { path: 'editor-dashboard', component: EditorDashboardComponent },
+  { path: '', component: EditorDashboardComponent },
   { path: 'song-editor/:id', component: SongEditorComponent }
 ];
 

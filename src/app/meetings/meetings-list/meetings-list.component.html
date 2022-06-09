@@ -2,10 +2,10 @@
     <div class="nameContainer">
         <h2>ALL MEETINGS</h2>
     </div>
-    <button routerLink="/meeting-adding">Add new meeting</button>
+    <button routerLink="./meeting-adding">Add new meeting</button>
     <ul>
         <li *ngFor="let meeting of meetings">
-            <a [routerLink]="['/meeting', meeting.id]"><span>{{meeting.id}}</span>{{meeting.author}}</a>
+            <a [routerLink]="['./meeting', meeting.id]"><span>{{meeting.id}}</span>{{meeting.author}}</a>
         </li>
     </ul>
 </div>

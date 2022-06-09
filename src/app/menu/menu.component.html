@@ -3,9 +3,9 @@
     <div class="navigation">
         <a routerLink="/songs">Songs List</a>
         <a routerLink="/meetings" *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">Meetings</a>
-        <a routerLink="/editor-dashboard" *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">Editor</a>
+        <a routerLink="/editor" *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">Editor</a>
         <a routerLink="/login" *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()">Login</a>
-        <a routerLink="" (click)="hardcodedAuthenticationService.loggoutUser()"
+        <a routerLink="/logout" (click)="hardcodedAuthenticationService.logoutUser()"
              *ngIf="hardcodedAuthenticationService.isUserLoggedIn()">Logout</a>
     </div>
 </nav>

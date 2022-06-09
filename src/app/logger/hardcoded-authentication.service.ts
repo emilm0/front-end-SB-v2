@@ -20,7 +20,7 @@ export class HardcodedAuthenticationService {
     return !(user === null);
   }
 
-  loggoutUser(): void {
-    sessionStorage.clear();
+  logoutUser(): void {
+    sessionStorage.removeItem('authenticateUser');
   }
 }

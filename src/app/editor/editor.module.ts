@@ -15,7 +15,7 @@ import { SharedModule } from '../shared.module';
   ],
   imports: [
     SharedModule,
-    EditorRoutingModule
+    EditorRoutingModule,
   ]
 })
 export class EditorModule { }

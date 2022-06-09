@@ -15,8 +15,10 @@ import { SharedModule } from './shared.module';
 import { LoginComponent } from './logger/login/login.component';
 import { WelcomeComponent } from './logger/welcome/welcome.component';
 import { MenuComponent } from './menu/menu.component';
-
-
+import { LogoutComponent } from './logger/logout/logout.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -26,13 +28,15 @@ import { MenuComponent } from './menu/menu.component';
     MessagesComponent,
     LoginComponent,
     WelcomeComponent,
-    MenuComponent
+    MenuComponent,
+    LogoutComponent
   ],
   imports: [
     SharedModule,
+    BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
     SongsModule,
-    EditorModule,
-    MeetingsModule,
     AppRoutingModule,
   ],
   providers: [],
